@@ -39,4 +39,4 @@ Avec la flexibilité du paradigme SDN, on peut définir puissance d’émission 
 
 De plus, la découverte du réseau centralisée permet au le contrôleur d’avoir une vision globale de toute la topologie pour ainsi définir le meilleur chemin à emprunter ce qui permet aussi de réduire le trafic et l’énergie consommée.
 
------------------------------------------------------------Fin-----------------------------------------------------------
+    -----------------------------------------------------------Fin-----------------------------------------------------------
