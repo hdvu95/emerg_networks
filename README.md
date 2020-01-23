@@ -21,3 +21,22 @@ De plus, 6LoWPAN utilise le protocole DODAG (destination oriented directed acycl
 * __Choix du design & découverte du réseau__ :
 
 ![Architecture du SD6WSN](img1.png "Architecture du SD6WSN")
+
+
+L’architecture SD6WSN comporte une couche de contrôle incluant la découverte de réseau et les fonctions de contrôle de flux, et le « southbound API » permet la communication entre cette couche de contrôle et les nœuds.
+
+L’interface southbound utilise le protocole SD6WSNP et envoie ses messages à travers l’API CoAP de la librairie Libcoap.
+
+RPL est toujours utilisé pour le routage des messages SD6WSNP pour réduire les coûts d’envoi et optimiser le trafic du réseau, cependant pour davantage de qualité de services le routage de paquets IPv6 vers le contrôleur est fait par le standard TCP/IP.
+
+SD6WSNP définit 4 messages: node-mod, info-get, flow-mod and packet-in. Les messages sont classifié suivant les processus auxquels ils sont associés . Node-mod and info-get are utilisé pour la découverte du réseau :
+
+Node-mod est le 1er message envoyé par SD6WSNP, depuis le contrôleur au routeur 6LBR, qui demande une notification à chaque fois qu’un nouveau nœud est identifié par RPL. Et après avoir reçu une notification, le contrôleur envoie un message info-get afin d’obtenir les voisins qui ont été découverts et leur qualité du trafic respective.
+
+## Question 3:
+
+Avec la flexibilité du paradigme SDN, on peut définir puissance d’émission de chaque nœud ainsi réduire la consommation d’énergie et augmenter la durée de vie de la batterie.
+
+De plus, la découverte du réseau centralisée permet au le contrôleur d’avoir une vision globale de toute la topologie pour ainsi définir le meilleur chemin à emprunter ce qui permet aussi de réduire le trafic et l’énergie consommée.
+
+-----------------------------------------------------------Fin-----------------------------------------------------------
