@@ -20,4 +20,4 @@ De plus, 6LoWPAN utilise le protocole DODAG (destination oriented directed acycl
 
 * __Choix du design & découverte du réseau__ :
 
-![Architecture du SD6WSN]( "Architecture du SD6WSN")
+![Architecture du SD6WSN](img1.png "Architecture du SD6WSN")
